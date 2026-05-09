@@ -1,0 +1,436 @@
+/* WATERMARK BACKGROUND */
+
+body::before{
+content:"I ❤️ YOU MAA   I ❤️ YOU MAA   I ❤️ YOU MAA   I ❤️ YOU MAA";
+position:fixed;
+top:40%;
+left:-20%;
+width:200%;
+font-size:42px;
+font-weight:bold;
+color:rgba(255,255,255,0.07);
+transform:rotate(-25deg);
+z-index:0;
+pointer-events:none;
+animation:moveWatermark 18s linear infinite;
+}
+
+@keyframes moveWatermark{
+
+0%{
+transform:
+rotate(-25deg)
+translateX(-120px);
+}
+
+100%{
+transform:
+rotate(-25deg)
+translateX(120px);
+}
+
+}
+
+/* moving gradient */
+
+body{
+min-height:100vh;
+background-attachment:fixed;
+background:
+linear-gradient(
+-45deg,
+#4b0082,
+#ff4fa3,
+#8a2be2,
+#ff69b4
+);
+
+background-size:
+400% 400%;
+
+animation:
+gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(
+        180deg,
+        #3d0066,
+        #7e18d8,
+        #ec0475
+    );
+    color:white;
+}
+
+/* floating background */
+
+#floating-hearts{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    z-index:1;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+/* pages */
+
+.page{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:1s ease;
+    padding:20px;
+}
+
+.page.active{
+    left:0;
+}
+
+/* hero */
+
+.hero-page{
+    overflow:hidden;
+}
+
+.hero-img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:black;
+    filter:brightness(50%);
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(
+        rgba(61,0,102,0.3),
+        rgba(255,79,163,0.3)
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.hero-content h3{
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:2rem;
+font-weight:700;
+margin-bottom:20px;
+color:#ffffff;
+
+text-shadow:
+0 0 15px #ff69b4,
+0 0 35px #ff1493,
+0 0 60px #ff1493;
+
+animation:
+pulseText 2s infinite;
+}
+
+@keyframes pulseText{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.hero-content h1{
+    font-family:'Dancing Script',cursive;
+    font-size:3.5rem;
+    text-shadow:
+    0 0 20px rgb(233, 138, 154),
+    0 0 40px rgb(241, 88, 241);
+}
+
+.hero-content span{
+    color:#f73be4;
+}
+
+.hero-content p{
+    margin:20px 0;
+    font-size:1rem;
+}
+
+/* cards */
+
+.memory-card,
+.letter-card{
+    max-height:90vh;
+overflow-y:auto;
+    width:100%;
+    max-width:370px;
+    background:
+    rgba(78, 0, 99, 0.45);
+    backdrop-filter:blur(18px);
+    border:
+    1px solid rgba(255,255,255,.15);
+    border-radius:35px;
+    padding:22px;
+    text-align:center;
+    z-index:2;
+    animation:fadeUp 1s;
+    box-shadow:
+    0 0 30px rgba(255,255,255,0.15);
+}
+
+.memory-card img{
+width:100%;
+height:65vh;
+object-fit:cover;
+border-radius:28px;
+margin-bottom:20px;
+box-shadow:
+0 0 30px rgba(255,105,180,.35);
+}
+
+.memory-card h2{
+    margin-bottom:10px;
+}
+
+.memory-card p{
+    line-height:1.8;
+}
+
+/* buttons */
+
+button{
+    border:none;
+    padding:16px 28px;
+    border-radius:50px;
+    margin-top:20px;
+    background:
+    linear-gradient(
+        45deg,
+        #ff4fa3,
+        #b5179e
+    );
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    box-shadow:
+    0 0 20px rgba(255,0,128,.5);
+}
+
+/* letter */
+
+.letter-card h1{
+    margin-bottom:20px;
+}
+
+#typing-text{
+    line-height:2;
+    min-height:250px;
+}
+
+/* final */
+
+.final-page{
+    flex-direction:column;
+    text-align:center;
+    z-index:2;
+}
+
+.final-page h1{
+    font-family:'Dancing Script',cursive;
+    font-size:3.5rem;
+}
+
+.final-page p{
+    margin:20px 0;
+}
+
+/* animation */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* watermark */
+
+body::before{
+content:
+"I ❤️ YOU MAA  I ❤️ YOU MAA  I ❤️ YOU MAA";
+
+position:fixed;
+top:30%;
+left:-20%;
+font-size:50px;
+font-weight:700;
+
+color:
+rgba(255,255,255,0.08);
+
+transform:
+rotate(-25deg);
+
+z-index:0;
+
+width:200%;
+
+animation:
+waterMove 15s linear infinite;
+
+pointer-events:none;
+}
+
+@keyframes waterMove{
+
+0%{
+transform:
+rotate(-25deg)
+translateX(-100px);
+}
+
+100%{
+transform:
+rotate(-25deg)
+translateX(100px);
+}
+
+}
+/* family photos horizontal */
+
+.family-card img{
+height:auto !important;
+max-height:260px;
+object-fit:contain !important;
+border-radius:22px;
+background:rgba(255,255,255,.08);
+padding:8px;
+}
+/* movie zoom */
+
+.hero-img{
+animation:
+slowZoom 10s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.08);
+}
+
+}
+/* premium final surprise */
+
+.final-page h1{
+
+font-size:4rem;
+
+text-shadow:
+0 0 20px #ff69b4,
+0 0 40px #d946ef,
+0 0 80px #ff69b4;
+
+animation:
+pulseLove 2.2s infinite;
+}
+
+.final-page p{
+font-size:1.2rem;
+opacity:.9;
+}
+
+/* glowing animation */
+
+@keyframes pulseLove{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* final button glow */
+
+.final-page button{
+
+box-shadow:
+0 0 20px rgba(255,105,180,.5),
+0 0 45px rgba(217,70,239,.4);
+
+animation:
+buttonGlow 2s infinite;
+}
+
+@keyframes buttonGlow{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}

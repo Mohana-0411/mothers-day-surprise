@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Amma ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <audio id="clickSound">
+<source src="click.mp3" type="audio/mp3">
+</audio>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Floating Hearts -->
+  <div id="floating-hearts"></div>
+
+  <!-- PAGE 1 -->
+  <section class="page hero-page active">
+
+    <div class="overlay"></div>
+
+    <img src="images/photo1.jpg" class="hero-img">
+
+    <div class="hero-content">
+      <h3>Happy Mother's Day ❤️</h3>
+
+      <h1>
+        My Unique <span>Momy</span> 💖
+      </h1>
+
+      <p>
+        Naa life lo chala important person nuvve ❤️
+      </p>
+
+      <button onclick="nextPage(1)">
+        See Your Surprise Momy ❤️
+      </button>
+    </div>
+
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page memory-page">
+
+    <div class="memory-card">
+      <img src="images/photo1.jpg">
+
+      <h2>Mana Beautiful Memories ❤️</h2>
+
+      <p>
+        Ee photo chusinappudu naku chala happy feel avthanu endhuku ante adhi nene thesa, gurthundha nuv function ki ready ayinappudu aapi mari thesa ❤️
+      </p>
+
+      <button onclick="nextPage(2)">
+        Mana Next Photos 💖
+      </button>
+    </div>
+
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page memory-page">
+
+    <div class="memory-card">
+      <img src="images/photo2.jpg">
+
+      <h2>My Favourite Smile ❤️</h2>
+
+      <p>
+        Nuvvu navvithe naaku aa day motham edho theliyani satisfaction thelusa. Ni smile kosam nuvvu emi adigina chestha Maa. ❤️
+      </p>
+
+      <button onclick="nextPage(3)">
+        inka konni photos 💞
+      </button>
+    </div>
+
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page memory-page">
+
+    <div class="memory-card">
+      <img src="images/photo3.jpg">
+
+      <h2>Special Moment 💝</h2>
+
+      <p>
+        Naaku eppudu support ga unna person nuvve.Nuv naku eppati dhanka naaku chala nerpinchav maa. ayina nenu nerchukovalsinavi chala unnai. I will definitely learn them. Nuv cheppinattu kopam,vesuku thagginchukovataniki chala try chestunna.Nuv cherpinchina Hostel kuda naku chala nerpinchindhi Maa. ❤️
+      </p>
+
+      <button onclick="nextPage(4)">
+        Next oka chinna maata💗
+      </button>
+    </div>
+
+  </section>
+<!-- SMALL MESSAGE PAGE -->
+
+<section class="page memory-page">
+
+<div class="memory-card">
+
+<h2>Oka Chinna Promise Amma ❤️</h2>
+
+<p>
+Nenu direct ga ekkuva cheppakapovachu Maa...
+
+kani naa life lo strongest person
+nuvve ❤️
+
+Naa smile venaka,
+naa happiness venaka,
+eppudu nuvve untav ❤️
+ 
+You are my Hope Maa 🥲
+
+Akka Indenpendent ga Thana Job thanu tecchukuni ninnu gelipinchindi, alage nenu kuda ninnu gelipisthanu Maa ❤️
+
+Ni decisions medha naaku eppudu nammakam untundi.Your decisions are the best decisions for me. nenu eppudu nuvvu cheppina vishayalu gurthupettukuntanu Maa ❤️
+
+Nenu best daugther ni kaka povacchu momy, kani nuv matram world kalla best and UNIQUE amma vi ❤️
+
+Ninnu entha praise chesina thakkuve Maa💝 
+
+I love you so much Amma 🥰😘
+</p>
+
+<button onclick="nextPage(5)">
+Our Beautiful Family 💖
+</button>
+
+</div>
+
+</section>
+
+<!-- FAMILY PHOTO 1 -->
+
+<section class="page memory-page">
+
+<div class="memory-card family-card">
+
+<img src="images/photo5.jpg">
+
+<h2>Our Beautiful Family ❤️</h2>
+
+<p>
+Mana family naa favourite place ❤️
+</p>
+
+<button onclick="nextPage(6)">
+One More Family Memory 💖
+</button>
+
+</div>
+
+</section>
+
+<!-- FAMILY PHOTO 2 -->
+
+<section class="page memory-page">
+
+<div class="memory-card family-card">
+
+<img src="images/photo6.jpg">
+
+<h2>My Happy Place ❤️</h2>
+
+<p>
+Meeru unna place eppudu special ee naaku❤️
+</p>
+
+<button onclick="nextPage(7)">
+One Last Message 💌
+</button>
+
+</div>
+
+</section>
+  <!-- LETTER PAGE -->
+  <section class="page letter-page">
+
+    <div class="letter-card">
+
+      <h1>Oka Chinna Message Amma 💌</h1>
+
+      <p id="typing-text"></p>
+
+      <button onclick="nextPage(8)">
+        Final Surprise ❤️
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- FINAL PAGE -->
+  <section class="page final-page">
+
+    <h1>Love You Forever Amma ❤️</h1>
+
+    <p>
+      Nuvvu naa biggest strength ❤️. Prathi mothers day ki akka,nenu, chelli eppudu edho okati plan chese vallam kani ee mothers day ki dhaggara kuda lemu😔. Naake ento la undhi. Nenu akkada undi cheyaleka poyina ekkada nunchi aina neeku chinna gift eddham ani ela chesa.edhi ma mugguri nundi "Happy Mothers Day Amma".
+    </p>
+
+    <button onclick="heartExplosion()">
+      "Click for Final Surprise Amma 💖"    
+
+    </button>
+
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
